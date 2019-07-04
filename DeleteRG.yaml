@@ -4,6 +4,6 @@
   tasks:
     - name: Delete a resource group
       azure_rm_resourcegroup:
-        name: AnsibleWinRG1
+        name: AnsiTowerWinRG25
         force_delete_nonempty: true
         state: absent
