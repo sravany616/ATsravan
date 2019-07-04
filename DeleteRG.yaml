@@ -1,0 +1,9 @@
+---
+- hosts: localhost
+  connection: local
+  tasks:
+    - name: Delete a resource group
+      azure_rm_resourcegroup:
+        name: AnsibleWinRG1
+        force_delete_nonempty: true
+        state: absent
