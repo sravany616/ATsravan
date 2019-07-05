@@ -4,7 +4,6 @@
   remote_user: useradmin
   # remote_user: user
   # sudo: yes
-
   roles:
     - common
     - mariadb
