@@ -11,3 +11,9 @@
         name: ATowerVMRG11
         force_delete_nonempty: true
         state: absent
+        
+    - name: Delete a resource group
+       azure_rm_resourcegroup:
+        name: ATowerVMRG22
+        force_delete_nonempty: true
+        state: absent
