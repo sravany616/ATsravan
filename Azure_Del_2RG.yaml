@@ -14,6 +14,6 @@
         
     - name: Delete a resource group
       azure_rm_resourcegroup:
-        name: ATowerVMRG22
+        name: AnsiTowerWinRG25
         force_delete_nonempty: true
         state: absent
