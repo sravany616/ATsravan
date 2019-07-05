@@ -10,7 +10,7 @@
     vm_name: linuxvm001
     offer: CentOS
     publisher: 
-    admin_password: useradminPWD
+    admin_password: HIVVIIL3whfs5
 
   tasks:
  
@@ -46,7 +46,7 @@
   - name: provision new Azure virtual host
     azure_rm_virtualmachine:
       admin_username: useradmin
-      admin_password: useradminpwd
+      admin_password: HIVVIIL3whfs5
       os_type: Windows
       image:
         offer: WindowsServer
