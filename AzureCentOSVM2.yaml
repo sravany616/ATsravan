@@ -1,6 +1,6 @@
 ---
 - name: Create Azure VM
-   hosts: localhost
+  hosts: localhost
   connection: local
   become: False
   gather_facts: False
