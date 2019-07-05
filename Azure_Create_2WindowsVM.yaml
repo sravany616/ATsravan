@@ -1,0 +1,82 @@
+---
+- name: Create an azure instance
+  hosts: localhost
+  connection: local
+  become: False
+  gather_facts: False
+  vars:
+    location: westus
+    resource_group: Resource_Group_Tower
+    vm_name: linuxvm001
+    offer: CentOS
+    publisher: 
+    admin_password: HIVVIIL3whfs5
+
+  tasks:
+ 
+  - name: create Azure resource group
+    azure_rm_resourcegroup:
+      name: AnsiTowerWinRG25
+      location: eastus
+      state: present
+
+  - name: Create a virtual network
+    azure_rm_virtualnetwork:
+      name: AnsWinVirNet4
+      resource_group: AnsiTowerWinRG25
+      address_prefixes_cidr:
+      - 10.1.0.0/16
+      state: present
+  
+  - name: Create a subnet
+    azure_rm_subnet:
+      name: AnsWinSubnet4
+      state: present
+      virtual_network_name: AnsWinVirNet4
+      resource_group: AnsiTowerWinRG25
+      address_prefix_cidr: 10.1.0.0/24
+
+  - name: create an account
+    azure_rm_storageaccount:
+      #  Storage account name must be between 3 and 24 characters in length and use numbers and lower-case letters only.
+      name: ansstoacc126
+      resource_group: AnsiTowerWinRG25
+      account_type: Standard_LRS
+
+  - name: provision new Azure virtual host
+    azure_rm_virtualmachine:
+      admin_username: useradmin
+      admin_password: HIVVIIL3whfs5
+      os_type: Windows
+      image:
+        offer: WindowsServer
+        publisher: MicrosoftWindowsServer
+        sku: 2016-Datacenter
+        version: latest
+      # Windows OS server name should be less than 15 characters
+      name: ATowerwinvm
+      resource_group: AnsiTowerWinRG25
+      state: present
+      vm_size: Standard_D1
+      storage_account_name: ansstoacc126
+      virtual_network_name: AnsWinVirNet4
+      subnet_name: AnsWinSubnet4
+      
+  - name: provision new Azure virtual host
+    azure_rm_virtualmachine:
+      admin_username: useradmin
+      admin_password: HIVVIIL3whfs5
+      os_type: Windows
+      image:
+        offer: WindowsServer
+        publisher: MicrosoftWindowsServer
+        sku: 2016-Datacenter
+        version: latest
+      # Windows OS server name should be less than 15 characters
+      name: ATowerwinvm2
+      resource_group: AnsiTowerWinRG25
+      state: present
+      vm_size: Standard_D1
+      storage_account_name: ansstoacc126
+      virtual_network_name: AnsWinVirNet4
+      subnet_name: AnsWinSubnet4
