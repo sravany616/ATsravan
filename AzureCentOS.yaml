@@ -11,61 +11,61 @@
         publisher: 
         
 
-      tasks:
-      - name: Create resource group
-        azure_rm_resourcegroup:
-          name: AnsibleFCSVMRG11
-          location: eastus
-      - name: Create our virtual network
-        azure_rm_virtualnetwork:
-          resource_group: AnsibleFCSVMRG11
-          name: AnsibleFCSVNET11
-          address_prefixes: "10.0.0.0/16"
-      - name: Add subnet
-        azure_rm_subnet:
-          resource_group: AnsibleFCSVMRG11
-          name: AnsibleFCSVMSubnet1
-          address_prefix: "10.0.1.0/24"
-          virtual_network: AnsibleFCSVNET11
-      - name: Create public IP address
-        azure_rm_publicipaddress:
-          resource_group: AnsibleFCSVMRG11
-          allocation_method: Static
-          name: AnsFCSVMPublicIP
-        register: output_ip_address
-      - name: Dump public IP for VM which will be created
-        debug:
-          msg: "The public IP is {{ output_ip_address.state.ip_address }}."
-      - name: Create Network Security Group that allows SSH
-        azure_rm_securitygroup:
-          resource_group: AnsibleFCSVMRG11
-          name: AnsFCSVMNSGroup
-          rules:
-            - name: SSH
-              protocol: Tcp
-              destination_port_range: 22
-              access: Allow
-              priority: 1001
-              direction: Inbound
-      - name: Create virtual network inteface
-        azure_rm_networkinterface:
-          resource_group: AnsibleFCSVMRG11
-          name: AnsibleFCSVMNIC
-          virtual_network: AnsibleFCSVNET11
-          subnet: AnsibleFCSVMSubnet1
-          public_ip_name: AnsFCSVMPublicIP
-          security_group: AnsFCSVMNSGroup
-      - name: Create VM
-        azure_rm_virtualmachine:
-          resource_group: AnsibleFCSVMRG11
-          name: AnsibleFCSVM22
-          vm_size: Standard_DS1_v2
-          admin_username: azureuser6
-          admin_password: APCOSPW2easc6
-          ssh_password_enabled: true
-          network_interfaces: AnsibleFCSVMNIC
-          image:
-            offer: CentOS
-            publisher: OpenLogic
-            sku: '7.5'
-            version: latest
+        tasks:
+          - name: Create resource group
+            azure_rm_resourcegroup:
+              name: ATowerVMRG11
+              location: eastus
+          - name: Create our virtual network
+            azure_rm_virtualnetwork:
+              resource_group: ATowerVMRG11
+              name: AnsibleFCSVNET11
+              address_prefixes: "10.0.0.0/16"
+          - name: Add subnet
+            azure_rm_subnet:
+              resource_group: ATowerVMRG11
+              name: AnsibleFCSVMSubnet1
+              address_prefix: "10.0.1.0/24"
+              virtual_network: AnsibleFCSVNET11
+          - name: Create public IP address
+            azure_rm_publicipaddress:
+              resource_group: ATowerVMRG11
+              allocation_method: Static
+              name: AnsFCSVMPublicIP
+            register: output_ip_address
+          - name: Dump public IP for VM which will be created
+            debug:
+              msg: "The public IP is {{ output_ip_address.state.ip_address }}."
+          - name: Create Network Security Group that allows SSH
+            azure_rm_securitygroup:
+              resource_group: ATowerVMRG11
+              name: AnsFCSVMNSGroup
+              rules:
+                - name: SSH
+                  protocol: Tcp
+                  destination_port_range: 22
+                  access: Allow
+                  priority: 1001
+                  direction: Inbound
+          - name: Create virtual network inteface
+            azure_rm_networkinterface:
+              resource_group: ATowerVMRG11
+              name: AnsibleFCSVMNIC
+              virtual_network: AnsibleFCSVNET11
+              subnet: AnsibleFCSVMSubnet1
+              public_ip_name: AnsFCSVMPublicIP
+              security_group: AnsFCSVMNSGroup
+          - name: Create VM
+            azure_rm_virtualmachine:
+              resource_group: ATowerVMRG11
+              name: ATowerCentOSVM
+              vm_size: Standard_DS1_v2
+              admin_username: azureuser6
+              admin_password: APCOSPW2easc6
+              ssh_password_enabled: true
+              network_interfaces: AnsibleFCSVMNIC
+              image:
+                offer: CentOS
+                publisher: OpenLogic
+                sku: '7.5'
+                version: latest
