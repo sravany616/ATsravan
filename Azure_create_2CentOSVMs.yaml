@@ -51,7 +51,7 @@
   - name: Create virtual network inteface
     azure_rm_networkinterface:
       resource_group: ATowerVMRG11
-      name: AnsibleFCSVMNIC
+      name: AnsibleVMNIC1
       virtual_network: AnsibleFCSVNET11
       subnet: AnsibleFCSVMSubnet1
       public_ip_name: AnsFCSVMPublicIP
@@ -64,13 +64,21 @@
       admin_username: azureuser6
       admin_password: APCOSPW2easc6
       ssh_password_enabled: true
-      network_interfaces: AnsibleFCSVMNIC
+      network_interfaces: AnsibleVMNIC1
       image:
         offer: CentOS
         publisher: OpenLogic
         sku: '7.5'
         version: latest
-        
+  - name: Create virtual network inteface
+    azure_rm_networkinterface:
+      resource_group: ATowerVMRG11
+      name: AnsibleVMNIC2
+      virtual_network: AnsibleFCSVNET11
+      subnet: AnsibleFCSVMSubnet1
+      public_ip_name: AnsFCSVMPublicIP
+      security_group: AnsFCSVMNSGroup
+      
   - name: Create VM
     azure_rm_virtualmachine:
       resource_group: ATowerVMRG11
@@ -79,7 +87,7 @@
       admin_username: azureuser7
       admin_password: APCOSPW2easc7
       ssh_password_enabled: true
-      network_interfaces: AnsibleFCSVMNIC
+      network_interfaces: AnsibleVMNIC2
       image:
         offer: CentOS
         publisher: OpenLogic
