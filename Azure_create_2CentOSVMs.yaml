@@ -70,13 +70,25 @@
         publisher: OpenLogic
         sku: '7.5'
         version: latest
+        
+        
+  - name: Create public IP address
+    azure_rm_publicipaddress:
+      resource_group: ATowerVMRG11
+      allocation_method: Static
+      name: AnsVMPublicIP2
+    register: output_ip_address
+  - name: Dump public IP for VM which will be created
+    debug:
+      msg: "The public IP is {{ output_ip_address.state.ip_address }}."
+        
   - name: Create virtual network inteface
     azure_rm_networkinterface:
       resource_group: ATowerVMRG11
       name: AnsibleVMNIC2
       virtual_network: AnsibleFCSVNET11
       subnet: AnsibleFCSVMSubnet1
-      public_ip_name: AnsFCSVMPublicIP
+      public_ip_name: AnsVMPublicIP2
       security_group: AnsFCSVMNSGroup
       
   - name: Create VM
