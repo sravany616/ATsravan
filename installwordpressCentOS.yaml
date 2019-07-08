@@ -1,0 +1,27 @@
+---
+- name: Install WordPress, MariaDB, Nginx, and PHP-FPM
+  hosts: ATowerCentOSVM
+  remote_user: azureuser6
+  # remote_user: user
+  # sudo: yes
+
+  roles:
+    - common
+    - mariadb
+    - nginx
+    - php-fpm
+    - wordpress
+    
+    
+- name: Install WordPress, MariaDB, Nginx, and PHP-FPM
+  hosts: ATowerCentOSVM2
+  remote_user: azureuser7
+  # remote_user: user
+  # sudo: yes
+
+  roles:
+    - common
+    - mariadb
+    - nginx
+    - php-fpm
+    - wordpress
