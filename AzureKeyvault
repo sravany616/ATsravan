@@ -1,0 +1,8 @@
+- name: Create a secret
+  azure_rm_keyvaultsecret:
+    secret_name: MySecrettest
+    secret_value: KmdjKol80&aswedfNjHfi&3
+    keyvault_uri: https://testcredentails.vault.azure.net/
+    tags:
+        testing: testing
+        delete: never
