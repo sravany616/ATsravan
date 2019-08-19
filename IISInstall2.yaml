@@ -1,11 +1,16 @@
 ---
-- name: Install IIS
-  hosts: windows
+- hosts: windows
   gather_facts: true
   tasks:
-   - win_feature:
+  - name: Install IIS web server
+    win_feature:
        name: Web-Server
        state: present
        restart: yes
        include_sub_features: yes
        include_management_tools: yes
+     register: win_feature
+   - name : Reboot if necessary
+      win_reboot:
+      When: Win_feature.reboot_required
+     
