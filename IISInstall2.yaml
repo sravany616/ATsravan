@@ -1,5 +1,5 @@
 ---
-- hosts: win
+- hosts: all
   connection: local
   gather_facts: no
   tasks:
