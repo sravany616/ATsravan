@@ -1,7 +1,7 @@
 ---
-- hosts: localhost
+- hosts: win
   connection: local
-  gather_facts: true
+  gather_facts: no
   tasks:
   - name: Install IIS web server
     win_feature:
