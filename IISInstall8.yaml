@@ -1,6 +1,6 @@
----
-gather_facts: true
-- name: Install IIS (Web-Server only)
+- name: Install IIS (Web-Server and Web-Common-Http)
   win_feature:
-    name: Web-Server
+    name:
+    - Web-Server
+    - Web-Common-Http
     state: present
