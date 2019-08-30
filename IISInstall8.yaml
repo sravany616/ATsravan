@@ -1,6 +1,5 @@
 ---
 - name: Install IIS
-  hosts: all
   gather_facts: false
   tasks:
 - name: Install IIS (Web-Server and Web-Common-Http)
