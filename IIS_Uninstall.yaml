@@ -9,3 +9,6 @@
         state: absent
         include_sub_features: yes
         include_management_tools: yes
+        
+    - name: Unconditionally reboot the machine with all defaults
+       reboot:
