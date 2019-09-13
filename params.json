@@ -1,8 +1,6 @@
 {
     "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
     "contentVersion": "1.0.0.0",
-    "test":"111",
-    "test2":"2222",
     "parameters": {
         "baseUrl": {
             "value": "https://github.com/sravany616/ATsravan/new/master"
