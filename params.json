@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "baseUrl": {
-            "value": https://github.com/sravany616/ATsravan/new/master
+            "value": "https://github.com/sravany616/ATsravan/new/master"
         },
         "location": {
             "value": "eastus"
