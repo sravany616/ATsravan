@@ -30,7 +30,7 @@
             "value": "8a85f99b69fd5d08016a483a5f286a6d"
         },
         "sshPublicKey": {
-            "value": "---- BEGIN SSH2 PUBLIC KEY ----\nComment: \"rsa-key-20190913\"\nAAAAB3NzaC1yc2EAAAABJQAAAQEAlEwOouCVEjeKrXimyV/12YcoN7t5PCK4EBIP\nbtMDJoBvnLCqbHIrH0Fa+jlTkVfjDhnvK6mEyfiDRHqhYVYSaDzeqaB1AYJVHXlz\nL65lZFnGgjsBPquRcbfh9UFcH1/+d10QM5scw6lQm2gzhL2Tw38RQPX+JJNc2Zqh\nQ4KqsrgpCDsSk/Qz7zB8FCBti092HOcHYFWoE8jD8Okss0McdI6Is/2tHESLdrZ+\nTtomepNQ0WKg/rzrwPiHC/DCs8csIoKXL+zjPkoAjXTzZty45JEBJKkObYPGMqIT\nz3pZSlWHLgTM9Lgr0T+2uhcGffjcJ+w7SOUxYSd9kmRoMtyzeQ==\n---- END SSH2 PUBLIC KEY ----\n"
+            "value": "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAlEwOouCVEjeKrXimyV/12YcoN7t5PCK4EBIPbtMDJoBvnLCqbHIrH0Fa+jlTkVfjDhnvK6mEyfiDRHqhYVYSaDzeqaB1AYJVHXlzL65lZFnGgjsBPquRcbfh9UFcH1/+d10QM5scw6lQm2gzhL2Tw38RQPX+JJNc2ZqhQ4KqsrgpCDsSk/Qz7zB8FCBti092HOcHYFWoE8jD8Okss0McdI6Is/2tHESLdrZ+TtomepNQ0WKg/rzrwPiHC/DCs8csIoKXL+zjPkoAjXTzZty45JEBJKkObYPGMqITz3pZSlWHLgTM9Lgr0T+2uhcGffjcJ+w7SOUxYSd9kmRoMtyzeQ== rsa-key-20190913"
         },
         "keyVaultResourceGroup": {
             "value": "Ansible_Openshift_RG"
