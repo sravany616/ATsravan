@@ -1,0 +1,60 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "baseUrl": {
+            "value": "https://github.com/sravany616/ATsravan/new/master"
+        },
+        "location": {
+            "value": "eastus"
+        },
+        "openshiftClusterPrefix": {
+            "value": "AnsOpenShiftcluster"
+        },
+        "adminUsername": {
+            "value": "sryeruvaapo" 
+        },
+        "clusterSize": {
+            "value": "small"
+        },
+        "openshiftPassword": {
+            "value": "zseCFRD1!"
+        },
+        "rhsmUsername": {
+            "value": "skryeruva"
+        },
+        "rhsmPassword": {
+            "value": "EUHFIVBTHAMdc1@"
+        },
+        "rhsmPoolId": {
+            "value": "8a85f99b69fd5d08016a483a5f286a6d"
+        },
+        "sshPublicKey": {
+            "value": "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAlEwOouCVEjeKrXimyV/12YcoN7t5PCK4EBIPbtMDJoBvnLCqbHIrH0Fa+jlTkVfjDhnvK6mEyfiDRHqhYVYSaDzeqaB1AYJVHXlzL65lZFnGgjsBPquRcbfh9UFcH1/+d10QM5scw6lQm2gzhL2Tw38RQPX+JJNc2ZqhQ4KqsrgpCDsSk/Qz7zB8FCBti092HOcHYFWoE8jD8Okss0McdI6Is/2tHESLdrZ+TtomepNQ0WKg/rzrwPiHC/DCs8csIoKXL+zjPkoAjXTzZty45JEBJKkObYPGMqITz3pZSlWHLgTM9Lgr0T+2uhcGffjcJ+w7SOUxYSd9kmRoMtyzeQ== rsa-key-20190913"
+        },
+        "keyVaultResourceGroup": {
+            "value": "Ansible_Openshift_RG"
+        },
+        "keyVaultName": {
+            "value": "AnsibleOpenshiftKeyVault"
+        },
+        "keyVaultSecret": {
+            "value": "Ansible-Openshift-KeySecret1"
+        },
+        "enableAzure": {
+            "value": "false"
+        },
+        "aadClientId": {
+            "value": "0b2c41a9-7a6b-4c40-beb0-505c7588b97d"
+        },
+        "aadClientSecret": {
+            "value": null
+        },
+        "defaultSubDomainType": {
+            "value": "custom"
+        },
+        "defaultSubDomain": {
+            "value": "xfc.io"
+        }
+    }
+}
