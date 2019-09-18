@@ -18,13 +18,13 @@
             "value": "small"
         },
         "openshiftPassword": {
-            "value": "zseCFRD1!"
+            "value": "password"
         },
         "rhsmUsername": {
             "value": "skryeruva"
         },
         "rhsmPassword": {
-            "value": "EUHFIVBTHAMdc1@"
+            "value": "password"
         },
         "rhsmPoolId": {
             "value": "8a85f99b69fd5d08016a483a5f286a6d"
