@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "baseUrl": {
-            "value": "https://github.com/sravany616/ATsravan/blob/master/params.json"
+            "value": "https://github.com/sravany616/ATsravan/blob/master"
         },
         "location": {
             "value": "eastus"
@@ -12,43 +12,43 @@
             "value": "AnsOpenShiftcluster"
         },
         "adminUsername": {
-            "value": "sryeruvaapo" 
+            "value": "" 
         },
         "clusterSize": {
             "value": "small"
         },
         "openshiftPassword": {
-            "value": "zsedfgrCFRD1!"
+            "value": ""
         },
         "rhsmUsername": {
-            "value": "skryeruva"
+            "value": ""
         },
         "rhsmPassword": {
-            "value": "EUHFIVBTHAMdc1@"
+            "value": ""
         },
         "rhsmPoolId": {
-            "value": "8a85f99b69fd5d08016a483a5f286a6d"
+            "value": ""
         },
         "sshPublicKey": {
             "value": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCvMj61K49R6cc9DiiLsF4441MaqtN4smr/OMPbeKe4TNG1qrVf+v4VBwaz5GtYhqyJVM9mT2RlQLNLeuQXXpbD3ttHxWzWObjLiiDIgcJ0ozq2Dz8FztDWsqPUhkqpG/pASTjdpMpfef4ZM0xIFiu4Ujl5gtnK2T/7BGsFw6Tub319gwrK7dvfIOjJuPSvw2kxeUTEbXa2zTDd40OPYKK/ZDmzRX8rzwFlJ6tPpmzX8eTLvA6aXpHYGIuBCgGy+8Gfg990bOmVc8V9LRbeByBNf7odGeVlB3zuPZR9VmUPfBDRd1vPe3kPdd/C+KjwWmF33G4CAiiMPD7MW9bXaYYB"
         },
         "keyVaultResourceGroup": {
-            "value": "Ansible_Openshift_RG"
+            "value": ""
         },
         "keyVaultName": {
-            "value": "AnsibleOpenshiftKeyVault"
+            "value": ""
         },
         "keyVaultSecret": {
-            "value": "Ansible-Openshift-KeySecret1"
+            "value": ""
         },
         "enableAzure": {
             "value": "false"
         },
         "aadClientId": {
-            "value": "0b2c41a9-7a6b-4c40-beb0-505c7588b97d"
+            "value": ""
         },
         "aadClientSecret": {
-            "value": "PFSPNABOTan1@"
+            "value": ""
         },
         "defaultSubDomainType": {
             "value": "custom"
