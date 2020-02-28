@@ -5,7 +5,7 @@
 
   - name: authenticate with a Vault app role 
     set_fact: 
-      vault_auth: "{{ lookup('hashi_vault', 'secret=eait-se-ansibletower-test/secrets/kv/testlinuxserverpath auth_method=approle role_id=5ba892e7-0c2e-1ca2-d947-6cf87e0801a4 secret_id=443d5318-3734-cb78-b8a2-b6a7ad714c40 url=https://test.ess.ea.com')}}"
+      vault_auth: "{{ lookup('hashi_vault', 'secret=eait-se-ansibletower-test/secrets/kv/awxtestlinuxvmpath auth_method=approle role_id=5ba892e7-0c2e-1ca2-d947-6cf87e0801a4 secret_id=92c394d0-61cf-cf07-354f-4e15b6daabf4 url=https://test.ess.ea.com')}}"
  
   - name: take raw return json and convert to object 
     set_fact: 
